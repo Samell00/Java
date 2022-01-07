@@ -1,0 +1,32 @@
+html{
+    background-color: rgb(231, 109, 160);
+}
+h1{
+    font-family: 'Shizuru', cursive;
+    font-size: 65px;
+    text-align: center;
+}
+#submit, #restart{
+    font-family: 'Shizuru', cursive;
+    font-weight: bold;
+    color: white;
+    background: black;
+}
+#results{
+    font-family: 'Yellowtail', cursive;
+    color: black;
+}
+.question{
+    font-family: 'Shizuru', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+.answers{
+    font-family: 'Yellowtail', cursive;
+    position: relative;
+    left: 50%;
+}
+input[type=radio]{
+    display: block;
+}
