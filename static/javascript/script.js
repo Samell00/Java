@@ -80,19 +80,19 @@ const myQuestions = [
 }
 ];
 
-function buildQuiz(){
+const buildQuiz = () => {
     //variable for the html output of the questions and answers
-  const output = [];
+   const output = [];
 
-// for each question
-myQuestions.forEach(
-  (currentQuestion, questionNumber) => {
+   // for each question
+   myQuestions.forEach(
+   (currentQuestion, questionNumber) => {
 
-    // variable to store the list of possible answers for the html output
-    const answers = [];
+   // variable to store the list of possible answers for the html output
+   const answers = [];
 
-    // and for each available answer
-    for(letter in currentQuestion.answers){
+     // and for each available answer
+     for(letter in currentQuestion.answers){
 
       // a radio tag for each answer to the question
       answers.push(
@@ -101,49 +101,47 @@ myQuestions.forEach(
           ${letter} :
           ${currentQuestion.answers[letter]}
         </label>`
-      );
-    }
+       );
+     }
      // adds the questions and the answers to the html output
      output.push(
-      `<div class="question"> ${currentQuestion.question} </div>
-      <div class="answers"> ${answers.join('')} </div>`
-    );
-  }
-);
-
+       `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join('')} </div>`
+     );
+   });
 // finally combine our output list into one string of HTML and put it on the page
 quizContainer.innerHTML = output.join('');
 }
 
-function showResults(){
-     //select all answers to your questions
-  const answerContainers = quizContainer.querySelectorAll('.answers');
+const showResults= () => {
+   //select all answers to your questions
+   const answerContainers = quizContainer.querySelectorAll('.answers');
 
-// keep track of user's answers
-let numCorrect = 0;
+   // keep track of user's answers
+   let numCorrect = 0;
 
-// for each question...
-myQuestions.forEach( (currentQuestion, questionNumber) => {
+     // for each question...
+     myQuestions.forEach( (currentQuestion, questionNumber) => {
 
-  // find selected answer
-  const answerContainer = answerContainers[questionNumber];
-  const selector = `input[name=question${questionNumber}]:checked`;
-  const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+     // find selected answer
+     const answerContainer = answerContainers[questionNumber];
+     const selector = `input[name=question${questionNumber}]:checked`;
+     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-  // if answer is correct
-  if(userAnswer === currentQuestion.correctAnswer){
-    // add to the number of correct answers
-    numCorrect++;
+     // if answer is correct
+       if(userAnswer === currentQuestion.correctAnswer){
+       // add to the number of correct answers
+       numCorrect++;
 
-    // color the answers green
-    answerContainers[questionNumber].style.color = 'lightgreen';
-  }
-  // if answer is wrong or blank
-  else{
-    // color the answers red
-    answerContainers[questionNumber].style.color = 'red';
-  }
-});
+       // color the answers green
+       answerContainers[questionNumber].style.color = 'lightgreen';
+       }
+       // if answer is wrong or blank
+       else{
+       // color the answers red
+       answerContainers[questionNumber].style.color = 'red';
+       }
+     });
 
 // show number of correct answers out of total
 resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
