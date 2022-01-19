@@ -1,6 +1,7 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+const retry = document.getElementById('backto');
 const myQuestions = [
   {
     question: "Which of these is the most popular at mcdonalds?",
@@ -97,13 +98,15 @@ const buildQuiz = () => {
       // a radio tag for each answer to the question
       answers.push(
          `<input type="radio" id="question" name="question${questionNumber}" value="${letter}">
-         <label for="question">${currentQuestion.answers[letter]}</label>`
+          <label for="question">${currentQuestion.answers[letter]}</label>`
        );
      }
      // adds the questions and the answers to the html output
      output.push(
-       `<div class="question"> ${currentQuestion.question} </div>
-        <div class="answers"> ${answers.join('')} </div>`
+       `<div id="Quizcon">
+        <div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join('')} </div>
+        </div>`
      );
    });
 // finally combine our output list into one string of HTML and put it on the page
@@ -111,8 +114,10 @@ quizContainer.innerHTML = output.join('');
 }
 
 const showResults= () => {
-   //select all answers to your questions
+   //find all answers in the div called answers
    const answerContainers = quizContainer.querySelectorAll('.answers');
+   //select the div called message to display a different message depending on how many the user got right
+   const message = document.getElementById("message");
 
    // keep track of user's answers
    let numCorrect = 0;
@@ -120,28 +125,32 @@ const showResults= () => {
      // for each question...
      myQuestions.forEach( (currentQuestion, questionNumber) => {
 
-     // find selected answer
+     // references the radio buttons
      const answerContainer = answerContainers[questionNumber];
+     //selects the radio buttons that where selected by the user
      const selector = `input[name=question${questionNumber}]:checked`;
-     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+     //selects the users answers and groups them into one value
+     const UserAnswer = (answerContainer.querySelector(selector)).value;
 
      // if answer is correct
-       if(userAnswer === currentQuestion.correctAnswer){
-       // add to the number of correct answers
+       if(UserAnswer === currentQuestion.correctAnswer){
+       // adds 1 to the count of correct answers
        numCorrect++;
+      
+      }
+      if(numCorrect >= 7){
+        message.innerHTML = "Well done! looks like someone was hungry";
 
-       // color the answers green
-       answerContainers[questionNumber].style.color = 'lightgreen';
-       }
-       // if answer is wrong or blank
-       else{
-       // color the answers red
-       answerContainers[questionNumber].style.color = 'red';
-       }
-     });
-
-// show number of correct answers out of total
-resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+      } else if(numCorrect <= 4){
+        messsage.innerHTML = "Good but not quite all the knowledge you need to know which fast food place is best for your taste";
+      }
+      else{
+        message.innerHTML = "Please try again, you dont seem to know how to get a great fast food deal";
+      }
+    });
+ 
+ // show number of correct answers out of total
+ resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 }
 
 //to show the quiz when document loads
@@ -149,3 +158,6 @@ buildQuiz();
 
 //when button is clicked the function is evoked
 submitButton.addEventListener('click', showResults);
+
+//sends user back to retry quiz when clicked
+retry.addEventListener('click', );
