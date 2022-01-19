@@ -96,11 +96,8 @@ const buildQuiz = () => {
 
       // a radio tag for each answer to the question
       answers.push(
-        `<label>
-          <input type="radio" name="question${questionNumber}" value="${letter}">
-          ${letter} :
-          ${currentQuestion.answers[letter]}
-        </label>`
+         `<input type="radio" id="question" name="question${questionNumber}" value="${letter}">
+         <label for="question">${currentQuestion.answers[letter]}</label>`
        );
      }
      // adds the questions and the answers to the html output

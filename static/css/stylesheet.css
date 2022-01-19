@@ -6,27 +6,36 @@ h1{
     font-size: 65px;
     text-align: center;
 }
-#submit, #restart{
+#quiz{
+    margin-left: 35px;
+}
+#submit{
     font-family: 'Shizuru', cursive;
     font-weight: bold;
     color: white;
     background: black;
+    position: relative;
+    left: 50%;
+    width: 50px;
 }
 #results{
     font-family: 'Yellowtail', cursive;
     color: black;
+    position: relative;
+    left: 50%;
 }
 .question{
     font-family: 'Shizuru', cursive;
     font-weight: bold;
-    text-align: center;
     font-size: 18px;
 }
 .answers{
     font-family: 'Yellowtail', cursive;
+    left: 40%;
     position: relative;
-    left: 50%;
+    display: inline-block;
 }
 input[type=radio]{
-    display: block;
+    display: list-item;
+    
 }
