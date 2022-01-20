@@ -1,5 +1,6 @@
 html{
     background-color: pink;
+    margin: 0 auto;
 }
 h1{
     font-family: 'Yellowtail', cursive;
@@ -60,4 +61,11 @@ p{
 }
 input[type=radio]{
     display: list-item;
+}
+footer{
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
 }

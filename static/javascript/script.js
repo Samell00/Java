@@ -1,19 +1,19 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
-const retry = document.getElementById('backto');
+const toquiz = document.getElementById('toquiz');
 const myQuestions = [
   {
-    question: "Which of these is the most popular at mcdonalds?",
+    question: "Which product is the most popular on the mcdonalds lunch menu?",
     answers: {
       A: "Big Mac",
-      B: "Egg Mcmuffin",
+      B: "McNuggets",
       C: "Fries"
     },
     correctAnswer: "C"
   },
   {
-    question: "Which fast food business is more well know for their burgers?",
+    question: "Which fast food business is most well know for their burgers?",
     answers: {
       A: "Burger King",
       B: "Mcdonalds",
@@ -32,21 +32,21 @@ const myQuestions = [
     correctAnswer: "B"
   },
   {
-    question: "Which fast food company has the firmest ice cream?", 
+    question: "Which fast food company has the popular ice cream?", 
     answers: {
      A: "Mcdonalds",
-     B: "Baskin Robbins",
+     B: "Burger King",
      C: "Dairy Queen"
     }, 
     correctAnswer: "C"
   },
   {
-   question: "Which restaurant has the most popular milkshakes?",
+   question: "Which restaurant sells the most popular milkshakes?",
     answers: {
     A: "Mcdonalds",
-    B: "Creams",
+    B: "Wendys",
     C: "Dairy Queen",
-    D: "Baskin Robbins"
+    D: "Burger King"
    },
    correctAnswer: "C"
   },
@@ -82,22 +82,22 @@ const myQuestions = [
 ];
 
 const buildQuiz = () => {
-    //variable for the html output of the questions and answers
+    //variable for the html output to store the questions and answers together in one block
    const output = [];
 
-   // for each question
+   // You create 2 more parameters to reference each question in the array of questions
    myQuestions.forEach(
-   (currentQuestion, questionNumber) => {
+   (currentQuestion, options) => {
 
-   // variable to store the list of possible answers for the html output
+   // variable to store the list of answers that you have put in the myQuestions array for the html output
    const answers = [];
 
      // and for each available answer
      for(letter in currentQuestion.answers){
 
-      // a radio tag for each answer to the question
+      // turning the answers from the quesiton array into radio tags by referencing the index from each value being the questions
       answers.push(
-         `<input type="radio" id="question" name="question${questionNumber}" value="${letter}">
+         `<input type="radio" name="question${options}">
           <label for="question">${currentQuestion.answers[letter]}</label>`
        );
      }
@@ -124,42 +124,30 @@ const showResults= () => {
    let numCorrect = 0;
 
      // for each question...
-     myQuestions.forEach( (currentQuestion, questionNumber) => {
+     myQuestions.forEach( (currentQuestion, options) => {
 
      // references the radio buttons
-     const answerContainer = answerContainers[questionNumber];
+     const answerContainer = answerContainers[options];
      //selects the radio buttons that where selected by the user
-     const selector = `input[name=question${questionNumber}]:checked`;
-     //selects the users answers and groups them into one value
+     const selector = `input[name=question${options}]:checked`;
+     //selects the users answers and groups them into one signle value aka number
      const UserAnswer = (answerContainer.querySelector(selector)).value;
 
      // if answer is correct
        if(UserAnswer === currentQuestion.correctAnswer){
        // adds 1 to the count of correct answers
        numCorrect++;
-      
-      }
-      if(numCorrect >= 7){
-        message.innerHTML = "Well done! looks like someone was hungry";
+       }
+ window.location.href= "results.html";
 
-      } else if(numCorrect <= 4){
-        messsage.innerHTML = "Good but not quite all the knowledge you need to know which fast food place is best for your taste";
-      }
-      else{
-        message.innerHTML = "Please try again, you dont seem to know how to get a great fast food deal";
-      }
-    });
  // show number of correct answers out of total
  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    }); 
 }
 
- const retryquiz= () => {
-  window.location.href = "file:///C:/Users/User/OneDrive/Java/index.html";
-}
 //to load the quiz when document loads
 buildQuiz();
 
 //when button is clicked the showResults function is evoked
 submitButton.addEventListener('click', showResults);
 
-retry.addEventListener('click', retryquiz);
