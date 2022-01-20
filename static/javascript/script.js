@@ -109,6 +109,7 @@ const buildQuiz = () => {
         </div>`
      );
    });
+ 
 // finally combine our output list into one string of HTML and put it on the page
 quizContainer.innerHTML = output.join('');
 }
@@ -148,16 +149,17 @@ const showResults= () => {
         message.innerHTML = "Please try again, you dont seem to know how to get a great fast food deal";
       }
     });
- 
  // show number of correct answers out of total
  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 }
 
-//to show the quiz when document loads
+ const retryquiz= () => {
+  window.location.href = "file:///C:/Users/User/OneDrive/Java/index.html";
+}
+//to load the quiz when document loads
 buildQuiz();
 
-//when button is clicked the function is evoked
+//when button is clicked the showResults function is evoked
 submitButton.addEventListener('click', showResults);
 
-//sends user back to retry quiz when clicked
-retry.addEventListener('click', );
+retry.addEventListener('click', retryquiz);

@@ -1,24 +1,40 @@
 html{
-    background-color: rgb(231, 109, 160);
+    background-color: pink;
 }
 h1{
-    font-family: 'Shizuru', cursive;
-    font-size: 65px;
+    font-family: 'Yellowtail', cursive;
+    font-size: 70px;
+    text-align: center;
+    color: red;
+}
+p{
+    font-family: 'Yellowtail', cursive;
+    font-size: 30px;
     text-align: center;
 }
 #quiz{
     margin-left: 25px;
 }
-#submit{
+#submit,#backto,#home{
     font-family: 'Shizuru', cursive;
-    font-weight: bold;
     color: white;
     background: black;
     position: relative;
     border-radius: 10px;
-    left: 50%;
+    left: 45%;
     height: 35px;
     width: 65px;
+}
+#toquiz{
+    font-family: 'Shizuru', cursive;
+    color: white;
+    background: black;
+    position: relative;
+    border-radius: 10px;
+    left: 45%;
+    height: 60px;
+    width: 160px; 
+    font-size: 20px;
 }
 #results{
     font-family: 'Yellowtail', cursive;
@@ -30,10 +46,11 @@ h1{
     margin: 15px;
 }
 .question{
-    font-family: 'Shizuru', cursive;
+    font-family: 'Yellowtail', cursive;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
+    color: red;
 }
 .answers{
     font-family: 'Yellowtail', cursive;
