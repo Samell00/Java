@@ -2,6 +2,7 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const toquiz = document.getElementById('toquiz');
+const homebutton = document.getElementById('home');
 const myQuestions = [
   {
     question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -117,10 +118,7 @@ quizContainer.innerHTML = output.join('');
 const showResults= () => {
    //find all answers in the div called answers
    const answerContainers = quizContainer.querySelectorAll('.answers');
-   //select the div called message to display a different message depending on how many the user got right
-   const message = document.getElementById("message");
-
-   // keep track of user's answers
+   // keep track of user's correct answers
    let numCorrect = 0;
 
      // for each question...
