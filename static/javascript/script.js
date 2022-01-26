@@ -1,8 +1,6 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
-const toquiz = document.getElementById('toquiz');
-const homebutton = document.getElementById('home');
 const myQuestions = [
   {
     question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -116,15 +114,15 @@ quizContainer.innerHTML = output.join('');
 }
 
 const showResults= () => {
-   //find all answers in the div called answers
-   const answerContainers = quizContainer.querySelectorAll('.answers');
-   // keep track of user's correct answers
-   let numCorrect = 0;
-
-     // for each question...
+  window.location.assign('results.html');
+     
+     // for each question 
      myQuestions.forEach( (currentQuestion, options) => {
-
-     // references the radio buttons
+      //find all selected answers in the div called answers
+     const answerContainers = quizContainer.querySelectorAll('.answers');
+     // keep track of user's correct answers
+     let numCorrect = 0; 
+      // references the radio buttons
      const answerContainer = answerContainers[options];
      //selects the radio buttons that where selected by the user
      const selector = `input[name=question${options}]:checked`;
@@ -136,14 +134,11 @@ const showResults= () => {
        // adds 1 to the count of correct answers
        numCorrect++;
        }
- window.location.href= "results.html";
-
- // show number of correct answers out of total
+  // show number of correct answers out of total
  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
     }); 
 }
 
-//to load the quiz when document loads
 buildQuiz();
 
 //when button is clicked the showResults function is evoked

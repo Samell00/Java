@@ -16,26 +16,34 @@ p{
 #quiz{
     margin-left: 25px;
 }
-#submit,#backto,#home{
-    font-family: 'Shizuru', cursive;
-    color: white;
-    background: black;
-    position: relative;
-    border-radius: 10px;
-    left: 45%;
-    height: 35px;
-    width: 65px;
-}
-#toquiz{
-    font-family: 'Shizuru', cursive;
-    color: white;
+#submit{
     background: black;
     position: relative;
     border-radius: 10px;
     left: 45%;
     height: 60px;
-    width: 160px; 
-    font-size: 20px;
+    width: 160px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-family: 'Shizuru', cursive;
+}
+a{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    font-family: 'Shizuru', cursive;
+    text-align: center;
+}
+#toquiz, #backto, #home{
+    background: black;
+    position: relative;
+    border-radius: 10px;
+    left: 45%;
+    height: 60px;
+    width: 160px;
+    margin-bottom: 10px; 
 }
 #results{
     font-family: 'Yellowtail', cursive;
