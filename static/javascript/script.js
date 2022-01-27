@@ -132,13 +132,13 @@ const showResults= () => {
        // adds 1 to the count of correct answers
        numCorrect++;
        }
-  // show number of correct answers out of total
- resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
     }); 
 }
 
 const resultpage= () =>{
   window.location.assign('results.html');
+
+  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 }
 
 buildQuiz();
@@ -146,5 +146,4 @@ buildQuiz();
 //when button is clicked the showResults function is evoked
 submitButton.addEventListener('click', resultpage);
 
-showResults();
 
