@@ -113,7 +113,7 @@ const buildQuiz = () => {
 quizContainer.innerHTML = output.join('');
 }
 
-const showResults= () => {
+const Result= () => {
      // for each question 
      myQuestions.forEach( (currentQuestion, options) => {
       //find all selected answers in the div called answers
@@ -132,18 +132,17 @@ const showResults= () => {
        // adds 1 to the count of correct answers
        numCorrect++;
        }
-    }); 
+    });
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`; 
 }
 
-const resultpage= () =>{
+const endpage= () =>{
   window.location.assign('results.html');
-
-  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 }
 
 buildQuiz();
 
 //when button is clicked the showResults function is evoked
-submitButton.addEventListener('click', resultpage);
+submitButton.addEventListener('click', endpage);
 
 
