@@ -114,8 +114,6 @@ quizContainer.innerHTML = output.join('');
 }
 
 const showResults= () => {
-  window.location.assign('results.html');
-     
      // for each question 
      myQuestions.forEach( (currentQuestion, options) => {
       //find all selected answers in the div called answers
@@ -139,8 +137,14 @@ const showResults= () => {
     }); 
 }
 
+const resultpage= () =>{
+  window.location.assign('results.html');
+}
+
 buildQuiz();
 
 //when button is clicked the showResults function is evoked
-submitButton.addEventListener('click', showResults);
+submitButton.addEventListener('click', resultpage);
+
+showResults();
 
