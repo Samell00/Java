@@ -20,14 +20,16 @@ p{
     background: black;
     position: relative;
     border-radius: 10px;
-    left: 45%;
+    left: 38%;
     height: 60px;
     width: 160px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     font-size: 30px;
     text-align: center;
     color: white;
     font-family: 'Shizuru', cursive;
+    cursor: pointer;
 }
 a{
     text-decoration: none;
@@ -51,8 +53,8 @@ a{
     position: relative;
     left: 50%;
 }
-#Quizcon{
-    margin: 15px;
+.Quizcon{
+    margin-top: 5%;
 }
 .question{
     font-family: 'Yellowtail', cursive;

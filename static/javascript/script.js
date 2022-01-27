@@ -102,7 +102,7 @@ const buildQuiz = () => {
      }
      // adds the questions and the answers to the html output
      output.push(
-       `<div id="Quizcon">
+       `<div class="Quizcon">
         <div class="question"> ${currentQuestion.question} </div>
         <div class="answers"> ${answers.join('')} </div>
         </div>`
