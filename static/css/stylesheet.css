@@ -15,6 +15,7 @@ p{
 }
 #quiz{
     margin-left: 25px;
+    margin-top: 5%;
 }
 #submit{
     background: black;
@@ -23,8 +24,8 @@ p{
     left: 38%;
     height: 60px;
     width: 160px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     font-size: 30px;
     text-align: center;
     color: white;
@@ -54,21 +55,21 @@ a{
     left: 50%;
     font-size: 15px;
 }
-.Quizcon{
-    margin-top: 5%;
-}
-.question{
+.currentquestion{
     font-family: 'Yellowtail', cursive;
     font-weight: bold;
     font-size: 40px;
     text-align: center;
     color: red;
+    position: relative;
+    margin-top: 5%;
 }
 .answers{
     font-family: 'Yellowtail', cursive;
     font-size: 25px;
     left: 40%;
     position: relative;
+    margin-top: 2%;
 }
 input[type=radio]{
     display: list-item;
