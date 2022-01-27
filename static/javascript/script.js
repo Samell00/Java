@@ -7,7 +7,8 @@ const myQuestions = [
     answers: {
       A: "Big Mac",
       B: "McNuggets",
-      C: "Fries"
+      C: "Fries",
+      D: "Double Cheeseburger"
     },
     correctAnswer: "C"
   },
@@ -16,7 +17,8 @@ const myQuestions = [
     answers: {
       A: "Burger King",
       B: "Mcdonalds",
-      C: "KFC"
+      C: "KFC",
+      D: "Wendys"
     },
     correctAnswer: "A"
   },
@@ -35,7 +37,8 @@ const myQuestions = [
     answers: {
      A: "Mcdonalds",
      B: "Burger King",
-     C: "Dairy Queen"
+     C: "Dairy Queen",
+     D: "Wendys"
     }, 
     correctAnswer: "C"
   },
@@ -54,7 +57,8 @@ const myQuestions = [
    answers: {
    A: "KFC",
    B: "Wendys",
-   C: "Taco Bell"
+   C: "Taco Bell",
+   D: "Mcdonalds"
   },
   correctAnswer: "A"
 },
@@ -138,7 +142,7 @@ const Result= () => {
 
 const Resultpage= () => {
   window.location.assign('results.html');
-  
+
 }
 
 buildQuiz();
