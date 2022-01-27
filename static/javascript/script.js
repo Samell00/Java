@@ -136,13 +136,13 @@ const Result= () => {
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`; 
 }
 
-const endpage= () =>{
-  window.location.assign('results.html');
+const Resultpage= () => {
+ window.location.assign('results.html');
 }
 
 buildQuiz();
 
 //when button is clicked the showResults function is evoked
-submitButton.addEventListener('click', endpage);
+submitButton.addEventListener('click', Resultpage);
 
 
