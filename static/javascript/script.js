@@ -137,8 +137,8 @@ const Result= () => {
 }
 
 const Resultpage= () => {
- window.location.assign('results.html');
-
+  window.location.assign('results.html');
+  
 }
 
 buildQuiz();
