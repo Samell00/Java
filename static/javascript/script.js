@@ -114,12 +114,12 @@ quizContainer.innerHTML = output.join('');
 }
 
 const Result= () => {
+  //find all selected answers in the div called answers
+  const answerContainers = quizContainer.querySelectorAll('.answers');
+  // keep track of user's correct answers
+  let numCorrect = 0;
      // for each question 
-     myQuestions.forEach( (currentQuestion, options) => {
-      //find all selected answers in the div called answers
-     const answerContainers = quizContainer.querySelectorAll('.answers');
-     // keep track of user's correct answers
-     let numCorrect = 0; 
+     myQuestions.forEach( (currentQuestion, options) => { 
       // references the radio buttons
      const answerContainer = answerContainers[options];
      //selects the radio buttons that where selected by the user
@@ -138,6 +138,7 @@ const Result= () => {
 
 const Resultpage= () => {
  window.location.assign('results.html');
+
 }
 
 buildQuiz();
