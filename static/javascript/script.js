@@ -118,30 +118,30 @@ const buildQuiz = () => {
 quizContainer.innerHTML = output.join('');
 }
 
-const Result= () => { 
-  // keep track of user's correct answers
-  let numCorrect = 0;
+const Result = () => { 
   //find all selected answers in the div called answers
-  const answerContainers = quizContainer.querySelectorAll('.answers');    
+  const answerContainers = quizContainer.querySelectorAll('.answers'); 
+  // keep track of user's correct answers
+  let numCorrect = 0;   
 
      myQuestions.forEach( (currentQuestion, options) => { 
       // references the radio buttons
      const answerContainer = answerContainers[options];
      //selects the radio buttons that where selected by the user
-     const selector = `input[name=question${options}]:checked`;
+     const selected = `input[name=question${options}]:checked`;
      //selects the users answers and groups them into one signle value aka number
-     const UserAnswer = (answerContainer.querySelector(selector)).value;
+     const UserAnswer = (answerContainer.querySelector(selected)).value;
      // if answer is correct
      if(UserAnswer === currentQuestion.correctAnswer) {
       // adds 1 to the count of correct answers
       numCorrect++;
-     }
+     } 
     });
-    quizContainer.classList.add('hidden');
     submitButton.classList.add('hidden');
+    quizContainer.classList.add('hidden'); 
     resultsContainer.classList.remove('hidden');
     homebutton.classList.remove('hidden');
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`; 
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 }
 
 buildQuiz();
