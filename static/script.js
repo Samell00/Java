@@ -101,10 +101,8 @@ function buildQuiz(){
 
         // ...add an HTML radio button
         answers.push(
-          `<label>
-            <input type="radio" name="question${questionNumber}" value="${letter}">
-           ${currentQuestion.answers[letter]}
-           </label>`
+          `<input type="radio" name="question${questionNumber}" value="${letter}">
+          <label for="question${questionNumber}">${currentQuestion.answers[letter]}</label>`
         );
       }
 
