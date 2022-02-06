@@ -82,8 +82,18 @@ const myQuestions = [
       d: "Wendys"
      },
      correctAnswer: "b"
+   },
+   {
+     question: "How many dips can you get with 20 Mcnuggets from Mcdonalds?",
+     answers: {
+       a: "2",
+       b: "6",
+       c: "4",
+       d: "3"
+     },
+     correctAnswer: "c"
    }
-  ];
+ ];
 
 function buildQuiz(){
     // variable to store the HTML output
@@ -143,7 +153,7 @@ const showResults= () => {
   submitButton.classList.add('hidden');
   homebutton.classList.remove('hidden');
   resultsContainer.classList.remove('hidden');
-  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
 }
 // display quiz right away
 buildQuiz();
