@@ -137,18 +137,16 @@ const Result= () => {
        numCorrect++;
        }
     });
+    quizContainer.classList.add('hidden');
+    resultsContainer.classList.remove('hidden');
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`; 
 }
 
-const Resultpage= () => {
-  window.location.assign('results.html');
-
-}
 
 buildQuiz();
 
 //when button is clicked the showResults function is evoked
-submitButton.addEventListener('click', Resultpage);
+submitButton.addEventListener('click', Result);
 
 
 
