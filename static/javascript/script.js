@@ -1,6 +1,7 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+const homebutton = document.getElementById('home');
 const myQuestions = [
   {
     question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -117,12 +118,12 @@ const buildQuiz = () => {
 quizContainer.innerHTML = output.join('');
 }
 
-const Result= () => {
-  //find all selected answers in the div called answers
-  const answerContainers = quizContainer.querySelectorAll('.answers');
+const Result= () => { 
   // keep track of user's correct answers
   let numCorrect = 0;
-     // for each question 
+  //find all selected answers in the div called answers
+  const answerContainers = quizContainer.querySelectorAll('.answers');    
+
      myQuestions.forEach( (currentQuestion, options) => { 
       // references the radio buttons
      const answerContainer = answerContainers[options];
@@ -130,18 +131,18 @@ const Result= () => {
      const selector = `input[name=question${options}]:checked`;
      //selects the users answers and groups them into one signle value aka number
      const UserAnswer = (answerContainer.querySelector(selector)).value;
-
      // if answer is correct
-       if(UserAnswer === currentQuestion.correctAnswer){
-       // adds 1 to the count of correct answers
-       numCorrect++;
-       }
+     if(UserAnswer === currentQuestion.correctAnswer) {
+      // adds 1 to the count of correct answers
+      numCorrect++;
+     }
     });
     quizContainer.classList.add('hidden');
+    submitButton.classList.add('hidden');
     resultsContainer.classList.remove('hidden');
+    homebutton.classList.remove('hidden');
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`; 
 }
-
 
 buildQuiz();
 

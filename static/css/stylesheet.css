@@ -17,6 +17,9 @@ p{
     margin-left: 25px;
     margin-top: 5%;
 }
+.Quizcon{
+    margin-bottom: 30px;
+}
 #submit{
     background: black;
     position: relative;
@@ -24,8 +27,8 @@ p{
     left: 38%;
     height: 60px;
     width: 160px;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 30px;
     text-align: center;
     color: white;
@@ -36,11 +39,11 @@ a{
     text-decoration: none;
     font-size: 30px;
     color: white;
-    font-family: 'Shizuru', cursive;
     text-align: center;
 }
-#toquiz, #backto, #home{
+#toquiz, #home{
     background: black;
+    font-family: 'Shizuru', cursive;
     position: relative;
     border-radius: 10px;
     left: 45%;
@@ -52,8 +55,10 @@ a{
     font-family: 'Yellowtail', cursive;
     color: black;
     position: relative;
-    left: 50%;
-    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 30px;
+    text-align: center;
 }
 .hidden{
     display: none;
