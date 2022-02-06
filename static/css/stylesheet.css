@@ -55,6 +55,9 @@ a{
     left: 50%;
     font-size: 15px;
 }
+.hidden{
+    display: none;
+}
 .currentquestion{
     font-family: 'Yellowtail', cursive;
     font-weight: bold;
