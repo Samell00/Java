@@ -150,17 +150,19 @@ const showResults= () => {
       numCorrect++;
     }
   });
-  try {
-    $('input[name=question]:unchecked');
-  } catch {
-    errormessage.innerHTML = "Please answer each question!";
-  }
-  
   quizContainer.classList.add('hidden');
   submitButton.classList.add('hidden');
   homebutton.classList.remove('hidden');
   resultsContainer.classList.remove('hidden');
-  resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
+  
+  if(numCorrect > 7){
+    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Well Done! Keep it up`;
+  }else if (numCorrect < 3){
+    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Better luck next time`;
+  }
+  else{
+    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Good but im sure you can do better`;
+  }
 }
 // display quiz right away
 buildQuiz();
