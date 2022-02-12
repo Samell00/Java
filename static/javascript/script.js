@@ -2,6 +2,7 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const homebutton = document.getElementById('Home');
+const errormessage = document.getElementById('error');
 const myQuestions = [
     {
       question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -149,6 +150,12 @@ const showResults= () => {
       numCorrect++;
     }
   });
+  try {
+    $('input[name=question]:unchecked');
+  } catch {
+    errormessage.innerHTML = "Please answer each question!";
+  }
+  
   quizContainer.classList.add('hidden');
   submitButton.classList.add('hidden');
   homebutton.classList.remove('hidden');
