@@ -4,6 +4,7 @@ const submitButton = document.getElementById('submit');
 const homebutton = document.getElementById('Home');
 const errormessage = document.getElementById('error');
 const resultmessage = document.getElementById('quizmessage');
+const retrybutton = document.getElementById('retry');
 const myQuestions = [
     {
       question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -154,6 +155,7 @@ const showResults= () => {
   quizContainer.classList.add('hidden');
   submitButton.classList.add('hidden');
   homebutton.classList.remove('hidden');
+  retrybutton.classList.remove('hidden');
   resultsContainer.classList.remove('hidden');
   resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
   

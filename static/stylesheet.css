@@ -60,6 +60,18 @@ a{
     margin-bottom: 10px;
     margin-top: 50px;   
 }
+#retry{
+    background: black;
+    font-family: 'Shizuru', cursive;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    left: 44%;
+    height: 60px;
+    width: 160px;
+    margin-bottom: 10px;
+    margin-top: 50px; 
+}
 #results{
     font-family: 'Yellowtail', cursive;
     color: black;
