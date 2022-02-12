@@ -162,10 +162,10 @@ const showResults= () => {
   if(numCorrect > 7){
     resultmessage.innerHTML = 'Excellent! Well Done';
   }else if (numCorrect < 3){
-    resultmessage.innerHTML = 'Hmmm you could do much better';
+    resultmessage.innerHTML = 'Come on you could do much better that this';
   }
   else{
-    resultmessage.innerHTML = 'Good! Keep learning though';
+    resultmessage.innerHTML = 'Good! Keep it up';
   }
 }
 // display quiz right away
