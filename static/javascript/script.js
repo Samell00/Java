@@ -156,12 +156,12 @@ const showResults= () => {
   resultsContainer.classList.remove('hidden');
   
   if(numCorrect > 7){
-    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Well Done! Keep it up`;
+    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Excellent! Well Done`;
   }else if (numCorrect < 3){
-    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Better luck next time`;
+    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Hmmm you could do much better`;
   }
   else{
-    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Good but im sure you can do better`;
+    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Good! Keep learning though`;
   }
 }
 // display quiz right away
