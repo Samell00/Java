@@ -3,6 +3,7 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const homebutton = document.getElementById('Home');
 const errormessage = document.getElementById('error');
+const resultmessage = document.getElementById('quizmessage');
 const myQuestions = [
     {
       question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -154,14 +155,15 @@ const showResults= () => {
   submitButton.classList.add('hidden');
   homebutton.classList.remove('hidden');
   resultsContainer.classList.remove('hidden');
+  resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
   
   if(numCorrect > 7){
-    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Excellent! Well Done`;
+    resultmessage.innerHTML = 'Excellent! Well Done';
   }else if (numCorrect < 3){
-    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Hmmm you could do much better`;
+    resultmessage.innerHTML = 'Hmmm you could do much better';
   }
   else{
-    resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length} Good! Keep learning though`;
+    resultmessage.innerHTML = 'Good! Keep learning though';
   }
 }
 // display quiz right away

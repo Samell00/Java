@@ -69,6 +69,13 @@ a{
     font-size: 30px;
     text-align: center;
 }
+#quizmessage{
+    font-family: 'Yellowtail', cursive;
+    color: black;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 40px;
+}
 .hidden{
     display:none;
 }
