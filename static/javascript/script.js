@@ -5,6 +5,7 @@ const homebutton = document.getElementById('Home');
 const errormessage = document.getElementById('error');
 const resultmessage = document.getElementById('quizmessage');
 const retrybutton = document.getElementById('retry');
+const nextbutton = document.getElementById('next');
 const myQuestions = [
     {
       question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -114,15 +115,18 @@ function buildQuiz(){
 
         // ...add an HTML radio button
         answers.push(
-          `<input type="radio" name="question${questionNumber}" value="${letter}">
-          <label for="question${questionNumber}">${currentQuestion.answers[letter]}</label>`
+          `<label for="question${questionNumber}">${currentQuestion.answers[letter]}</label>
+           <input type="radio" name="question${questionNumber}" value="${letter}" id="option">
+           `
         );
       }
 
       // add this question and its answers to the output
       output.push(
-        `<div class="currentquestion"> ${currentQuestion.question} </div>
-        <div class="answers"> ${answers.join('')} </div>`
+        `<div>
+         <div class="currentquestion"> ${currentQuestion.question} </div>
+         <div class="answers"> ${answers.join('')} </div>
+         </div>`
       );
     }
   );
@@ -144,7 +148,7 @@ const showResults= () => {
     // find selected answer
     const answerContainer = answerContainers[questionNumber];
     const selector = `input[name=question${questionNumber}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+    const userAnswer = (answerContainer.querySelector(selector) || {} ).value;
 
     // if answer is correct
     if(userAnswer === currentQuestion.correctAnswer){
@@ -161,15 +165,16 @@ const showResults= () => {
   
   if(numCorrect > 7){
     resultmessage.innerHTML = 'Excellent! Well Done';
-  }else if (numCorrect < 3){
+  }
+  else if (numCorrect < 3){
     resultmessage.innerHTML = 'Come on you could do much better that this';
   }
   else{
     resultmessage.innerHTML = 'Good! Keep it up';
   }
 }
+
 // display quiz right away
 buildQuiz();
-
 // on submit, show results
 submitButton.addEventListener('click', showResults);
