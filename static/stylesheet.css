@@ -45,7 +45,8 @@ p{
     text-align: center;
     color: white;
     font-family: 'Shizuru', cursive;
-    cursor: pointer; 
+    cursor: pointer;
+    display: inline-block; 
 }
 a{
     text-decoration: none;
