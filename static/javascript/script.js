@@ -5,6 +5,8 @@ const homebutton = document.getElementById('Home');
 const errormessage = document.getElementById('error');
 const resultmessage = document.getElementById('quizmessage');
 const retrybutton = document.getElementById('retry');
+const slide = querySelectorAll('slide');
+const slides = Array(slide);
 const myQuestions = [
     {
       question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -122,7 +124,7 @@ function buildQuiz(){
 
       // add this question and its answers to the output
       output.push(
-        `<div>
+        `<div class="slide">
          <div class="currentquestion"> ${currentQuestion.question} </div>
          <div class="answers"> ${answers.join('')} </div>
          </div>`
@@ -147,7 +149,7 @@ const showResults= () => {
     // find selected answer
     const answerContainer = answerContainers[questionNumber];
     const selector = `input[name=question${questionNumber}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector) || {} ).value;
+    const userAnswer = (answerContainer.querySelector(selector)).value;
 
     // if answer is correct
     if(userAnswer === currentQuestion.correctAnswer){
