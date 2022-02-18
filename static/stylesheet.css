@@ -19,6 +19,8 @@ p{
 }
 .slide{
     background: white;
+    border-style: dashed;
+    border-color: black;
     border-radius: 10px;
     padding: 7px;
     margin: 15px;
