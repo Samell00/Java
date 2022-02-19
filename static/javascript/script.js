@@ -161,10 +161,10 @@ const showResults= () => {
   result.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
   
   if(numCorrect > 7){
-    resultmessage.innerHTML = 'Excellent! Well Done';
+    resultmessage.innerHTML = 'Excellent Go you!';
   }
   else if (numCorrect < 3){
-    resultmessage.innerHTML = 'Come on you could do much better that this';
+    resultmessage.innerHTML = 'You should really know more than this';
   }
   else{
     resultmessage.innerHTML = 'Good! Keep it up';
