@@ -1,8 +1,9 @@
 const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
+const resultsContainer = document.getElementById('resultcontainer');
 const submitButton = document.getElementById('submit');
 const homebutton = document.getElementById('Home');
 const errormessage = document.getElementById('error');
+const result = document.getElementById('result');
 const resultmessage = document.getElementById('quizmessage');
 const retrybutton = document.getElementById('retry');
 const myQuestions = [
@@ -146,7 +147,7 @@ const showResults= () => {
     // find selected answer
     const answerContainer = answerContainers[questionNumber];
     const selector = `input[name=question${questionNumber}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector)).value;
+    const userAnswer = (answerContainer.querySelector(selector)|| {}).value;
 
     // if answer is correct
     if(userAnswer === currentQuestion.correctAnswer){
@@ -156,10 +157,8 @@ const showResults= () => {
   });
   quizContainer.classList.add('hidden');
   submitButton.classList.add('hidden');
-  homebutton.classList.remove('hidden');
-  retrybutton.classList.remove('hidden');
   resultsContainer.classList.remove('hidden');
-  resultsContainer.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
+  result.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
   
   if(numCorrect > 7){
     resultmessage.innerHTML = 'Excellent! Well Done';
