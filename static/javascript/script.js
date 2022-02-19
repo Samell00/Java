@@ -163,7 +163,7 @@ const showResults= () => {
   if(numCorrect > 7){
     resultmessage.innerHTML = 'Excellent Go you!';
   }
-  else if (numCorrect < 3){
+  else if (numCorrect < 4){
     resultmessage.innerHTML = 'You should really know more than this';
   }
   else{
