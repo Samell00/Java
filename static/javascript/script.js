@@ -1,11 +1,9 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('resultcontainer');
 const submitButton = document.getElementById('submit');
-const homebutton = document.getElementById('Home');
 const errormessage = document.getElementById('error');
 const result = document.getElementById('result');
 const resultmessage = document.getElementById('quizmessage');
-const retrybutton = document.getElementById('retry');
 const myQuestions = [
     {
       question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -170,7 +168,7 @@ const showResults= () => {
   else{
     resultmessage.innerHTML = 'Good! Keep it up';
   } 
-}
+};
 // display quiz right away
 buildQuiz();
 // on submit, show results
