@@ -24,6 +24,7 @@ p{
 }
 .slide{
     background: white;
+    border: solid black;
     border-radius: 20px;
     margin: 50px;
     padding: 7px;
