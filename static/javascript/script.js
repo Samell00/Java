@@ -1,3 +1,6 @@
+const home = document.getElementById('index');
+const homebutton = document.getElementById('Home');
+const start = document.getElementById('buildquiz');
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('resultcontainer');
 const submitButton = document.getElementById('submit');
@@ -114,7 +117,7 @@ function buildQuiz(){
         // ...add an HTML radio button
         answers.push(
           `<label for="question${questionNumber}">${currentQuestion.answers[letter]}</label>
-           <input type="radio" name="question${questionNumber}" value="${letter}" id="option">
+           <input type="radio" name="question${questionNumber}" value="${letter}" class="option">
            `
         );
       }
@@ -128,6 +131,12 @@ function buildQuiz(){
       );
     }
   );
+  //hide introduction section called home
+  home.classList.add('hidden');
+  //make quiz appear
+  quizContainer.classList.remove('hidden');
+  //make submit button appear aswell
+  submitButton.classList.remove('hidden');
   // finally combine our output list into one string of HTML and put it on the page
   quizContainer.innerHTML = output.join('');
 }
@@ -169,7 +178,13 @@ const showResults= () => {
     resultmessage.innerHTML = 'Good! Keep it up';
   } 
 };
-// display quiz right away
-buildQuiz();
+const Index = () =>{
+  resultsContainer.classList.add('hidden');
+  home.classList.remove('hidden');
+}
+// display quiz on the click of the start button
+start.addEventListener('click', buildQuiz);
 // on submit, show results
 submitButton.addEventListener('click', showResults);
+//To take user back to index of page
+homebutton.addEventListener('click', Index);
