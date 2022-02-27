@@ -1,12 +1,17 @@
 html{
     background-color: pink;
     margin: 0 auto;
+    overflow-x:hidden;
+}
+body{
+    justify-content: center;
+    margin: 3px;
 }
 h1{
+    color: red;
     font-family: 'Yellowtail', cursive;
     font-size: 70px;
     text-align: center;
-    color: red;
 }
 p{
     font-family: 'Yellowtail', cursive;
@@ -20,121 +25,121 @@ p{
 .slide{
     background: white;
     border-radius: 20px;
-    padding: 7px;
     margin: 50px;
+    padding: 7px;
 }
 #submit{
     background: black;
-    position: relative;
     border-radius: 10px;
-    left: 38%;
-    height: 60px;
-    width: 160px;
-    margin-bottom: 10px;
-    font-size: 30px;
-    text-align: center;
     color: white;
-    font-family: 'Shizuru', cursive;
     cursor: pointer;
+    font-family: 'Shizuru', cursive;
+    font-size: 30px;
+    height: 60px;
+    left: 38%;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    width: 160px;
 }
 #next{
     background: black;
-    position: relative;
     border-radius: 10px;
-    left: 38%;
-    height: 60px;
-    width: 160px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 30px;
-    text-align: center;
     color: white;
-    font-family: 'Shizuru', cursive;
     cursor: pointer;
-    display: inline-block; 
+    display: inline-block;
+    font-family: 'Shizuru', cursive;
+    font-size: 30px;
+    height: 60px;
+    left: 38%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    width: 160px;
 }
 a{
-    text-decoration: none;
-    font-size: 30px;
     color: white;
+    font-size: 30px;
+    text-decoration: none;
 }
 #toquiz{
     background: black;
+    border-radius: 10px;
     font-family: 'Shizuru', cursive;
+    height: 60px;
+    left: 45%;
+    margin-bottom: 10px;
     position: relative;
     text-align: center;
-    border-radius: 10px;
-    left: 45%;
-    height: 60px;
-    width: 160px;
-    margin-bottom: 10px; 
+    width: 160px; 
 }
 #Home{
     background: black;
-    font-family: 'Shizuru', cursive;
-    position: relative;
-    text-align: center;
     border-radius: 10px;
-    left: 44%;
+    font-family: 'Shizuru', cursive;
     height: 60px;
-    width: 160px;
+    left: 44%;
     margin-bottom: 10px;
-    margin-top: 50px;   
+    margin-top: 50px; 
+    position: relative; 
+    text-align: center; 
+    width: 160px;
 }
 #retry{
     background: black;
-    font-family: 'Shizuru', cursive;
-    position: relative;
-    text-align: center;
     border-radius: 10px;
-    left: 44%;
+    font-family: 'Shizuru', cursive;
     height: 60px;
-    width: 160px;
+    left: 44%;
     margin-bottom: 10px;
     margin-top: 50px; 
+    position: relative;
+    text-align: center;
+    width: 160px;
 }
 #result{
-    font-family: 'Yellowtail', cursive;
     color: black;
-    position: relative;
-    margin-top: 140px;
-    margin-left: 10px;
+    font-family: 'Yellowtail', cursive;
     font-size: 30px;
-    text-align: center;
+    margin-left: 10px;
+    margin-top: 140px;
     padding-top: 20px;
+    position: relative;
+    text-align: center;
 }
 #resultcontainer{
     background: white;
-    padding-bottom: 40px;
-    margin: 80px;
     border-radius: 20px;
+    margin: 80px;
+    padding-bottom: 40px;
 }
 #quizmessage{
-    font-family: 'Yellowtail', cursive;
     color: black;
-    text-align: center;
+    font-family: 'Yellowtail', cursive;
     font-size: 27px;
     margin-top: 40px;
+    text-align: center;
 }
 .hidden{
     display:none;
 }
 .currentquestion{
-    font-family: 'Yellowtail', cursive;
-    font-weight: bold;
-    font-size: 40px;
-    text-align: center;
     color: red;
-    position: relative;
+    font-family: 'Yellowtail', cursive;
+    font-size: 40px;
+    font-weight: bold;
     margin-top: 2%;
+    position: relative;
+    text-align: center;
 }
 .answers{
     font-family: 'Yellowtail', cursive;
     font-size: 25px;
     left: 40%;
-    position: relative;
-    margin-top: 1%;
     margin-bottom: 25px;
+    margin-top: 1%;
+    position: relative;
 }
 input[type=radio]{
     display: list-item;
@@ -143,9 +148,9 @@ input[type=radio]:hover{
     cursor: pointer;
 }
 footer{
-    width: 100%;
+    background-color: black;
+    bottom: 0;
     height: 20px;
     position: fixed;
-    bottom: 0;
-    background-color: black;
+    width: 100%;
 }

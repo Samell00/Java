@@ -157,6 +157,7 @@ const showResults= () => {
   });
   quizContainer.classList.add('hidden');
   submitButton.classList.add('hidden');
+  errormessage.classList.add('hidden');
   resultsContainer.classList.remove('hidden');
   result.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
   
@@ -168,7 +169,7 @@ const showResults= () => {
   }
   else{
     resultmessage.innerHTML = 'Good! Keep it up';
-  }
+  } 
 }
 // display quiz right away
 buildQuiz();
