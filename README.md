@@ -18,7 +18,7 @@ I also ran my code through online validation tools to ensure I was using correct
 
 - [Html validator](https://www.freeformatter.com/html-validator.html)
 
-- [Css Validator](https://www.cssportal.com/css-validator/)
+- [CSS Validator](https://www.cssportal.com/css-validator/)
 
 - [Javascript Validator](https://beautifytools.com/javascript-validator.php)
 
@@ -50,9 +50,9 @@ I used Git and Github as a version control system to upload all my files to the 
 
   - [Quiz page](https://github.com/Samell00/Java/blob/master/quiz.html)
 
-**Css file:**
+**CSS file:**
 
-  - [Css](https://github.com/Samell00/Java/blob/master/static/stylesheet.css)
+  - [CSS](https://github.com/Samell00/Java/blob/master/static/stylesheet.css)
 
 **Javascript file:**
 
