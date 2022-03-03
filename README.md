@@ -12,22 +12,22 @@ Navigation through the page is made easy with buttons that can take to you each 
 
 #### Introduction section:
 
-- "Start" button: 
+- **"Start" button:** 
 Clickable button on the introduction section to display quiz conatiner and hide the introduction container when the user has clicked it.
 
 #### Quiz section:
 
-- "Submit" button: 
+- **"Submit" button:**
 A button that the user clicks when they have answered every question to activate the function in javascript that processes results and will then hide the quiz container and show the results container to give the user their results.
 
 #### Results section:
 
-- "Home" button: 
+- **"Home" button:** 
 A button in the results container to hide the results conatiner and show the introduction container when user has gotten to the end and got their results, this button is displayed underneath their results and result message.
 
 ### Features that would improve my quiz
 
-- Submit button error message: 
+- **Submit button error message:**
 I have been advised to add this functionality to my javascript file to display a message when user hasnt clicked a radio tag for every question and has clicked on the Submit button. So far I have taken the or blank attribute out of my selector variables so the button doesnt work unless the user selects an answer, I am working on making code that works to this. 
 
 
@@ -101,7 +101,7 @@ I used Git and Github as a version control system to upload all my files to the 
 
 I used Adobe Comp to compile my wireframes to define the basic foundations of my quiz website
 
-- [Adobe Comp]()
+- [Adobe Comp](https://helpx.adobe.com/mobile-apps/help/comp-faq.html)
 
 ## Link to repository and files 
 
