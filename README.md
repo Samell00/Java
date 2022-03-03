@@ -37,7 +37,7 @@ I have been advised to add this functionality to my javascript file to display a
 
 ## Wireframes
 
-I used Adobe comp app on my phone to compile the wireframes, these are just a basci overview of how I want my page to look and function and what elements will do what and contain. I did Wireframes for both computer and phone view
+I used Adobe comp app on my phone to compile the wireframes, these are just a basic overview of how I want my page to look and function and what elements will do what and contain. I did Wireframes for both computer and phone view
 
 ### Computer view
 
@@ -61,7 +61,7 @@ I made sure to test my website each time I made a change on my file to see if it
 
 ### Bugs and problems
 
-I found that the footer wasnt appearing on my page, even after I tried changing the Css to see what would work it didnt seem to appear or if it did it would stick to the bottom of the page getting in the way of quiz questions, when I didnt make the position sticky.
+I found that the footer wasnt appearing on my page, even after I tried changing the CSS to see what would work it didnt seem to appear or if it did it would stick to the bottom of the page getting in the way of quiz questions, when I didnt make the position sticky.
 
 ### Validation
 
