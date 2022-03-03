@@ -8,9 +8,22 @@ This is my javascript quiz project on fast food, I have included many questions 
 
 Navigation through the page is made easy with buttons that can take to you each section on the introduction page theres a button to load the quiz page, when the user is finished the quiz they are given two buttons one to reload the quiz page so they can retry the quiz, the other one to take the user back to the home section giving the user smooth navigation through my quiz website. The color scheme is pink, white, red and black each question is made to resemble a menu board with a white background, black border and pretty font for a lively appearance this is to somewhat remind the user of being at a fast food restuarant. I changed the cursor to a pointer on all buttons and radio buttons when the user hovers over them to give an interactive experience. Each time the user completes the quiz they get a certain message based on their score they can get one of three messages "Excellent Go you!" for a result over 7, "Good! Keep it up" for a result between 4-7 and "You should really know more than this" when the result is less than 4 this is to make the user react to this and want to try harder or feel good if they got a good result.
 
+## Features
+
+
+### Features that would improve my quiz
+
+
+## Wireframes
+
+
 ## Testing
 
-I made sure to test my website each time I made a change on my file to see if it was still functional by opening my html files on a browser, so I could be presented with the output results of my code so I could what worked and what didnt, I usually did this before putting my code into online validators. Here are more details of the websites I used below.
+I made sure to test my website each time I made a change on my file to see if it was still functional by opening my html files on a browser and testing each feature to make sure the entire website was functional, so I could be presented with the output results of my code so I could what worked and what didnt, I usually did this before putting my code into online validators. Here are more details of the websites I used below.
+
+### Bugs and problems
+
+I found that the footer wasnt appearing on my page, even after I tried changing the Css to see what would work it didnt seem to appear or if it did it would stick to the bottom of the page getting in the way of quiz questions, when I didnt make the position sticky.
 
 ### Validation
 
@@ -28,6 +41,20 @@ I used Visual studio code as my editor to write all my code in and create all my
 
 - [Visual studio code](https://code.visualstudio.com/)
 
+And In Visual Studio Code I used different technologies to put it all together
+
+- [HTML5]()
+  - HTML5 to create the structure of my webpage as well as the elements to define the content.
+
+- [CSS3]()
+  - I used CSS3 to customize the elements of the webpage and add a certain look and theme to it.
+
+- [Javascript]()
+  - I used Javascript to manipulate the elements in my webpage and create the functions to generate the results of the quiz by adding functionality to the buttons on my webpage.
+
+- [Google fonts]()
+  - I got my font-family Yellowtail from Google fonts to add more customization to my page.
+
 The browser I used to open my files on an online output was Microsoft edge, this is the default browser that all my files were saved with.
 
 - [Microsoft edge](https://microsoftedgewelcome.microsoft.com/en-gb/get-started?int=00&exp=e81&focus=performance&form=MT005W)
@@ -37,6 +64,10 @@ I used Git and Github as a version control system to upload all my files to the 
 - [Git](https://git-scm.com/)
 
 - [Github](https://github.com/)
+
+I used Adobe Comp to compile my wireframes to define the basic foundations of my quiz website
+
+- [Adobe Comp]()
 
 ## Link to repository and files 
 
