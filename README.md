@@ -10,12 +10,46 @@ Navigation through the page is made easy with buttons that can take to you each 
 
 ## Features
 
+#### Introduction section:
+
+- "Start" button: 
+Clickable button on the introduction section to display quiz conatiner and hide the introduction container when the user has clicked it.
+
+#### Quiz section:
+
+- "Submit" button: 
+A button that the user clicks when they have answered every question to activate the function in javascript that processes results and will then hide the quiz container and show the results container to give the user their results.
+
+#### Results section:
+
+- "Home" button: 
+A button in the results container to hide the results conatiner and show the introduction container when user has gotten to the end and got their results, this button is displayed underneath their results and result message.
 
 ### Features that would improve my quiz
+
+- Submit button error message: 
+I have been advised to add this functionality to my javascript file to display a message when user hasnt clicked a radio tag for every question and has clicked on the Submit button. So far I have taken the or blank attribute out of my selector variables so the button doesnt work unless the user selects an answer, I am working on making code that works to this. 
 
 
 ## Wireframes
 
+I used Adobe comp app on my phone to compile the wireframes, these are just a basci overview of how I want my page to look and function and what elements will do what and contain. I did Wireframes for both computer and phone view
+
+### Computer view
+
+- [Intro page](https://github.com/Samell00/Java/blob/master/static/Images/Computer%20Intro%20page.jpg)
+
+- [Quiz page](https://github.com/Samell00/Java/blob/master/static/Images/Computer%20Quiz%20page.jpg)
+
+- [Result page](https://github.com/Samell00/Java/blob/master/static/Images/Computer%20Results%20page.jpg)
+
+### Phone view
+
+- [Intro page](https://github.com/Samell00/Java/blob/master/static/Images/Phone%20Intro%20page.jpg)
+
+- [Quiz page](https://github.com/Samell00/Java/blob/master/static/Images/Phone%20Quiz%20page.jpg)
+
+- [Result page](https://github.com/Samell00/Java/blob/master/static/Images/Phone%20Results%20page.jpg)
 
 ## Testing
 
@@ -41,18 +75,18 @@ I used Visual studio code as my editor to write all my code in and create all my
 
 - [Visual studio code](https://code.visualstudio.com/)
 
-And In Visual Studio Code I used different technologies to put it all together
+And In Visual Studio Code I used different technologies to put it all together.
 
-- [HTML5]()
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
   - HTML5 to create the structure of my webpage as well as the elements to define the content.
 
-- [CSS3]()
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
   - I used CSS3 to customize the elements of the webpage and add a certain look and theme to it.
 
-- [Javascript]()
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
   - I used Javascript to manipulate the elements in my webpage and create the functions to generate the results of the quiz by adding functionality to the buttons on my webpage.
 
-- [Google fonts]()
+- [Google fonts](https://fonts.google.com/)
   - I got my font-family Yellowtail from Google fonts to add more customization to my page.
 
 The browser I used to open my files on an online output was Microsoft edge, this is the default browser that all my files were saved with.
@@ -88,3 +122,23 @@ I used Adobe Comp to compile my wireframes to define the basic foundations of my
 **Javascript file:**
 
   - [Javascript](https://github.com/Samell00/Java/blob/master/static/javascript/script.js)
+
+## Deployment
+
+I have used Github to host my project and then I used Github pages to deploy my page. I added my files to my remote repository on github.com with these folowing steps:
+
+1. Opened Git bash and used my path directory to establish a path in Git.
+
+2. I initialized a Local Git repository using the `git init` command. 
+
+3. Added all files to my local git repository using `git add .` I did this every time I changed any of my files.
+
+4. logged the adding of the files in Git using `git commit -m "Commit message"` I did this also every time I used `git add .` to report any changes to the local repositry
+
+5. Went onto [github.com](https://github.com/) to create a remote repository called Java to host my project
+
+6. Added the remote repository to my local one using `git remote add origin https://github.com/Samell00/Java` then for my first push from my local to remote repository I used `git push -u origin master` then for all other pushes I was then able to just use `git push` while inside my local repository
+
+7. Went to my github account and reloaded the page to see the recent commits, then went to settings on my repository page
+
+8. Selected the 'master branch' option on the git hub pages section.
