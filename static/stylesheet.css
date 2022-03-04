@@ -3,15 +3,6 @@ html{
     margin: 0 auto;
     overflow-x: hidden;
 }
-@media only screen and (max-width: 400px) {
-    html{
-        background-color: pink;
-        margin: 0 auto;
-        width: 100vh;
-        height: 100vh;
-        overflow-x: hidden;  
-    }
-}
 h1{
     color: red;
     font-family: 'Yellowtail', cursive;
@@ -140,11 +131,64 @@ p{
         font-family: 'Shizuru', cursive;
         font-size: 20px;
         height: 50px;
-        left: 35%;
+        left: 30%;
         margin-bottom: 40px;
         position: relative;
         text-align: center;
         width: 140px;
+    }
+    #Home{
+        background: black;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        font-family: 'Shizuru', cursive;
+        font-size: 20px;
+        height: 50px;
+        left: 22%;
+        margin-bottom: 10px;
+        margin-top: 50px; 
+        position: relative;
+        width: 140px;
+    }
+    #result{
+        color: red;
+        font-family: 'Yellowtail', cursive;
+        font-size: 26px;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-top: 20px;
+        padding-top: 20px;
+        position: relative;
+        text-align: center;
+    }
+    #quizmessage{
+        color: black;
+        font-family: 'Yellowtail', cursive;
+        font-size: 25px;
+        margin-top: 40px;
+        text-align: center;
+    }
+    h1{
+        color: red;
+        font-family: 'Yellowtail', cursive;
+        font-size: 45px;
+        text-align: center;
+    }
+    p{
+        font-family: 'Yellowtail', cursive;
+        font-size: 25px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:300px){
+    html{
+        background-color: pink;
+        margin: 0 auto;
+        width: 100vh;
+        height: 100vh;
+        overflow-x: hidden;  
     }
 }
 input[type=radio]{
