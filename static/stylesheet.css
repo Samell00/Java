@@ -3,7 +3,7 @@ html{
     margin: 0 auto;
     overflow-x: hidden;
 }
-@media screen (max-width: 300px) {
+@media only screen and (max-width: 300px) {
     html{
         background-color: pink;
         margin: 0 auto;
