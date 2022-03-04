@@ -1,8 +1,16 @@
 html{
     background-color: pink;
     margin: 0 auto;
-    width: 100vh;
-    height: 100vh;
+    overflow-x: hidden;
+}
+@media screen (max-width: 300px) {
+    html{
+        background-color: pink;
+        margin: 0 auto;
+        width: 100vh;
+        height: 100vh;
+        overflow-x: hidden;  
+    }
 }
 h1{
     color: red;
