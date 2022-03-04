@@ -59,6 +59,8 @@ I used Adobe comp app on my phone to compile the wireframes, these are just a ba
 
 I made sure to test my website each time I made a change on my file to see if it was still functional by opening my html files on a browser and testing each feature to make sure the entire website was functional, so I could be presented with the output results of my code so I could what worked and what didnt, I usually did this before putting my code into online validators. Here are more details of the websites I used below.
 
+### Responsiveness
+
 ### Bugs and problems
 
 I found that the footer wasnt appearing on my page, even after I tried changing the CSS to see what would work it didnt seem to appear or if it did it would stick to the bottom of the page getting in the way of quiz questions, when I didnt make the position sticky.
