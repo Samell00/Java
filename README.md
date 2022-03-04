@@ -61,6 +61,8 @@ I made sure to test my website each time I made a change on my file to see if it
 
 ### Responsiveness
 
+I used my CSS to include media queries to style my page according to screen size, I did this then tested my site multiple times by deploying it on github then also sending myself the link and seeing the output, I did this to spot problems so I could then fix them by adjusting my CSS. I was a bit of a lengthy process as I had to repeatedly add and push my changes to github then view the link on my phone.
+
 ### Bugs and problems
 
 I found that the footer wasnt appearing on my page, even after I tried changing the CSS to see what would work it didnt seem to appear or if it did it would stick to the bottom of the page getting in the way of quiz questions, when I didnt make the position sticky.
