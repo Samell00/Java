@@ -146,7 +146,7 @@ p{
         font-family: 'Shizuru', cursive;
         font-size: 16px;
         height: 40px;
-        left: 15%;
+        left: 10%;
         margin-bottom: 10px;
         margin-top: 50px; 
         position: relative;
@@ -155,7 +155,7 @@ p{
     #result{
         color: red;
         font-family: 'Yellowtail', cursive;
-        font-size: 30px;
+        font-size: 35px;
         font-weight: bold;
         margin-left: 10px;
         margin-top: 20px;
