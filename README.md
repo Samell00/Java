@@ -65,7 +65,7 @@ I used my CSS to include media queries to style my page according to screen size
 
 ### Bugs and problems
 
-I found that the footer wasnt appearing on my page, even after I tried changing the CSS to see what would work it didnt seem to appear or if it did it would stick to the bottom of the page getting in the way of quiz questions, when I didnt make the position sticky.
+I found that the footer wasnt appearing on my page, even after I tried changing the CSS to see what would work it didnt seem to appear or if it did it would stick to the bottom of the page getting in the way of quiz questions, when I didnt make the position sticky. It oddly doesnt seem to even appear on the page when I make the position relative.
 
 ### Validation
 
