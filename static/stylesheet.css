@@ -104,7 +104,7 @@ p{
     margin: 25px;
     position: relative;
 }
-@media only screen and (max-width:700px){
+@media only screen and (max-width:500px){
     .answers{
         font-family: 'Yellowtail', cursive;
         font-size: 22px;
