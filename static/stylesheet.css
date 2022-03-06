@@ -65,7 +65,6 @@ p{
     font-family: 'Yellowtail', cursive;
     font-size: 50px;
     font-weight: bold;
-    margin-left: 10px;
     margin-top: 20px;
     padding-top: 20px;
     position: relative;
@@ -146,7 +145,7 @@ p{
         font-family: 'Shizuru', cursive;
         font-size: 16px;
         height: 40px;
-        left: 10%;
+        left: 17%;
         margin-bottom: 10px;
         margin-top: 50px; 
         position: relative;
@@ -157,7 +156,6 @@ p{
         font-family: 'Yellowtail', cursive;
         font-size: 30px;
         font-weight: bold;
-        margin-left: 10px;
         margin-top: 20px;
         padding-top: 20px;
         position: relative;
@@ -174,17 +172,18 @@ p{
         background: white;
         border: solid black;
         border-radius: 20px;
-        margin: 50px;
+        margin: 30px;
         margin-top: 60px;
-        padding: 40px;
+        padding: 30px;
     }
     #index{
         background: white;
         border: solid black;
         border-radius: 20px;
         margin: 20px;
-        margin-top: 80px;
+        margin-top: 60px;
         padding: 20px;
+    }
     h1{
         color: red;
         font-family: 'Yellowtail', cursive;
