@@ -61,7 +61,7 @@ I made sure to test my website each time I made a change on my file to see if it
 
 ### Responsiveness
 
-I used my CSS to include media queries to style my page according to screen size, I did this then tested my site multiple times by deploying it on github then also sending myself the link and seeing the output, I did this to spot problems so I could then fix them by adjusting my CSS. I was a bit of a lengthy process as I had to repeatedly add and push my changes to github then view the link on my phone.
+I used my CSS to include media queries to style my page according to screen size, I did this then tested my site multiple times by deploying it on github then also sending myself the link and seeing the output, I did this to spot problems so I could then fix them by adjusting my CSS. I was a bit of a lengthy process as I had to repeatedly add and push my changes to github then view the link on my phone, to see how readable everything was aswell as how big it all appeared on a phone screen so I would kno wIf i had to adjust anything in the media queries such as margins and padding, text-size as well as the max-width on the media queries.
 
 ### Bugs and problems
 
