@@ -7,6 +7,7 @@ const submitButton = document.getElementById('submit');
 const errormessage = document.getElementById('error');
 const result = document.getElementById('result');
 const resultmessage = document.getElementById('quizmessage');
+
 const myQuestions = [
     {
       question: "Which product is the most popular on the mcdonalds lunch menu?",
@@ -101,31 +102,32 @@ const myQuestions = [
  ];
 
 function buildQuiz(){
-    // variable to store the HTML output
+    // variable to store the HTML output for the quiz questions
   const output = [];
 
-  // for each question...
+  //For each arrow function for each question
   myQuestions.forEach(
     (currentQuestion, questionNumber) => {
 
-      // variable to store the list of possible answers
+      //Variable to store the list of possible answers
       const answers = [];
 
-      // and for each available answer...
+      //Using for function to reference each letter in the answers section of the currentQuestion index
       for(letter in currentQuestion.answers){
 
-        // ...add an HTML radio button
+        //Adding an HTML radio button for each answer
         answers.push(
+            //referencing the array index called question number.answers and getting each letter value and giving it a radiobutton  
           `<label for="question${questionNumber}">${currentQuestion.answers[letter]}</label>
            <input type="radio" name="question${questionNumber}" value="${letter}" class="option">
            `
         );
       }
 
-      // add this question and its answers to the output
+      //Adding a title to my answers being the question by referencing the current question index in my array then referncing the actual value in the array then making a div for the answers itself and joining all the data in it
       output.push(
         `<div class="slide">
-         <div class="currentquestion"> ${currentQuestion.question} </div>
+         <div class="currentquestion">${currentQuestion.question} </div>
          <div class="answers"> ${answers.join('')} </div>
          </div>`
       );
@@ -142,16 +144,17 @@ function buildQuiz(){
 }
 
 const showResults= () => {
-      // gather answer containers from our quiz
+   //gather answer containers from our quiz and storing it in a variable
   const answerContainers = quizContainer.querySelectorAll('.answers');
 
   // keep track of user's answers
   let numCorrect = 0;
 
-  // for each question...
+  //For each question in my array getting the index of my array with the variable names ive made for each index
   myQuestions.forEach( (currentQuestion, questionNumber) => {
 
-    // find selected answer
+    // find selected answer info and storing it in variables
+      //
     const answerContainer = answerContainers[questionNumber];
     const selector = `input[name=question${questionNumber}]:checked`;
     const userAnswer = (answerContainer.querySelector(selector)).value;
@@ -161,30 +164,41 @@ const showResults= () => {
       // add to the number of correct answers
       numCorrect++;
     }
+
+      
   });
+//Display screen code at end to only show the results and result message in the html 
   quizContainer.classList.add('hidden');
   submitButton.classList.add('hidden');
   errormessage.classList.add('hidden');
   resultsContainer.classList.remove('hidden');
+    //Referencing the variables containing info about number of correct answers and amount og questions in the myQuestions array
   result.innerHTML = `You Scored ${numCorrect} out of ${myQuestions.length}`;
-  
+
+//Logic to display certain message if the user gets a certai amount correct
+    //If number correct is more than 7 they get excellent
   if(numCorrect > 7){
     resultmessage.innerHTML = 'Excellent Go you!';
   }
+      //If number is less than 4 they get bad message
   else if (numCorrect < 4){
     resultmessage.innerHTML = 'You should really know more than this';
   }
+      //If number isnt more than 7 or less than 4 they get ok message
   else{
     resultmessage.innerHTML = 'Good! Keep it up';
   } 
 };
+//Function to take user back to the home page 
 const Index = () =>{
+    //hides the container containing reuslts 
   resultsContainer.classList.add('hidden');
+    //displays container containing the home page info
   home.classList.remove('hidden');
 }
-// display quiz on the click of the start button
+//Adding the build quiz function to start button to start quiz and build all the divs and selectors
 start.addEventListener('click', buildQuiz);
-// on submit, show results
+//Adding the show results function to the submit button 
 submitButton.addEventListener('click', showResults);
-//To take user back to index of page
+//Adding the index function to our home button class
 homebutton.addEventListener('click', Index);
